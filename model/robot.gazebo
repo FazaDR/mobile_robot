@@ -31,8 +31,10 @@
     <left_joint>wheel_joint</left_joint>
     <right_joint>wheel2_joint</right_joint>
 
-    <wheel_separation>${2 * mid_to_wheels}</wheel_separation>
-    <wheel_diameter>${2 * r}</wheel_diameter>
+    <wheel_separation>${2 *s4}</wheel_separation>
+    <wheel_diameter>${2*r}</wheel_diameter>
+
+    <max_linear_acceleration>10</max_linear_acceleration>
 
     <topic>cmd_vel</topic>
     <tf_topic>/tf</tf_topic>
@@ -41,8 +43,7 @@
     <child_frame_id>base_footprint</child_frame_id>
     <odom_publisher_frequency>30</odom_publisher_frequency>
 
-    <max_linear_acceleration>10</max_linear_acceleration>
-    <max_angular_acceleration>10</max_angular_acceleration>
+    <!--<max_angular_acceleration>10</max_angular_acceleration>-->
   </plugin>
 
   <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
